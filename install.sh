@@ -27,7 +27,7 @@ fi
 
 mkdir -p "$DST"
 
-for item in SKILL.md README.md LICENSE CHANGELOG.md references examples tools; do
+for item in SKILL.md README.md LICENSE CHANGELOG.md references examples tools integrations; do
   [ -e "$SRC/$item" ] && cp -R "$SRC/$item" "$DST/"
 done
 

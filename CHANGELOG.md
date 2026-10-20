@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## v0.1.2 — 2026-10-20
+
+**新增**
+- `integrations/system-prompt-rules.md`：蒸馏版 system prompt 规则（约 1.8KB），可直接接进
+  「用户一句话 → LLM 扩写」的链路；含三条接入原则与已知副作用。
+- `README.md`：新增「接进你自己的生成流水线」一节。
+- `install.ps1` / `install.sh`：把 `integrations/` 一并安装。
+
+**已完成的接入验证（在接入方项目内）**
+- 新增 `src/promptSkill.js` + `data/skill-fengguang.rules.md`，
+  `promptOptimizer.buildSystemPrompt(theme)` 在风光类主题追加规则；
+  `city` 与无主题不追加；`SKILL_PROMPT_ENABLED=false` 可关闭。
+- 验收脚本 `scripts/verify-skill-prompt.js`：44 项全过（不联网）。
+- 回归：`verify-stages` 45/45、`verify-stats` 42/42。
+- 已知环境限制：`verify-all.js` 在本机沙箱内 `spawn EPERM`，只能逐个直跑。
+
 ## v0.1.1 — 2026-10-20
 
 **新增**

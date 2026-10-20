@@ -27,8 +27,18 @@ SKILL.md              主规程：判据、两档风格、七段骨架、构图�
 references/词库.md    50 条「日常词 → 地貌专名」对照表 + 光线/运镜/材质/负面词
 references/风格指纹.md 全部实测数据、分片色板、复现方法、已知局限
 examples/样例.md      5 条完整范例 + 1 组反例改法 + 批量差异化技巧
+integrations/         蒸馏版 system-prompt 规则，可直接接进 LLM 优化链路
 CHANGELOG.md          版本记录
 ```
+
+## 接进你自己的生成流水线
+
+`SKILL.md` 给人读；要接进"用户一句话 → LLM 扩写提示词"的链路，用
+[`integrations/system-prompt-rules.md`](integrations/system-prompt-rules.md) —— 一份约 1.8KB 的蒸馏版规则，
+整段追加到 system prompt 即可。
+
+三条原则：**蒸馏而非全文**、**按主题开关**（风光规则别套到城市夜景上）、**可一键关闭**。
+参考实现见 `integrations/system-prompt-rules.md` 的「用在哪」一节。
 
 ## 怎么用
 

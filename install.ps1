@@ -27,7 +27,7 @@ if (Test-Path $dst) {
 
 New-Item -ItemType Directory -Path $dst -Force | Out-Null
 
-$payload = @("SKILL.md", "README.md", "LICENSE", "CHANGELOG.md", "references", "examples", "tools")
+$payload = @("SKILL.md", "README.md", "LICENSE", "CHANGELOG.md", "references", "examples", "tools", "integrations")
 foreach ($item in $payload) {
     $p = Join-Path $src $item
     if (Test-Path $p) {
